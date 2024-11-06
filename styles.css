@@ -1,0 +1,99 @@
+body {
+    background-color: #989a9cbe;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background: linear-gradient(35deg, #6c757d, #f8f9fa);
+    color: #fff;
+}
+/*
+main {
+    background-color: #6c757d83;
+}
+*/
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #f8f9fa;
+}
+/*調整圖片區域------------------------------------------------------*/
+#carousel img {
+    max-height: 400px;
+    object-fit: cover;
+    
+}
+
+.carousel-caption h5 {
+    
+    font-size: 2rem;
+    color: #f8f9fa; /* 調整標題顏色 */
+    background-color: #6c757d83;
+}
+
+.carousel-caption p {
+    
+    font-size: 1.25rem;
+    color: #f8f9fa; /* 調整描述顏色 */
+    background-color: #6c757d83;
+}
+
+
+
+/*------------------------------------------------------------------*/
+
+
+/* 讓頁面內容占滿整個視窗高度-----------------------------------------*/
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 讓主要內容擴展並占用可用空間，保持 footer 在底部 */
+main {
+    flex: 1;
+}
+
+/* 固定 footer 在頁面底部 */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative; /* 可選，保持 footer 固定在最下方 */
+    bottom: 0;
+}
+/*------------------------------------------------------------------*/
+
+/* 自定義樣式來確保響應式影片嵌入--------------------------------------*/
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 比例的影片 */
+}
+
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/*------------------------------------------------------------------*/
